@@ -16,7 +16,7 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   #IMAGE_NAME: ${{ github.repository }}
-  IMAGE_NAME: test
+  IMAGE_NAME: igluko/test
   DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
   DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
 
