@@ -11,7 +11,7 @@ The primary purpose of this project is to provide users with an out-of-the-box s
 
 To run the container, use the command below:
 
-```bash
+```
 docker run -d \
 --cap-add NET_ADMIN \
 --device /dev/net/tun \
@@ -19,6 +19,22 @@ igluko/zerotier-nat [YOUR_NETWORK_ID]
 ```
 
 Replace `[YOUR_NETWORK_ID]` with your ZeroTier network's ID. If you haven't set up a ZeroTier network yet, you can establish one through the ZeroTier administrative panel.
+
+## Compose
+
+To run with docker compose, use the command below:
+```
+git clone git@github.com:igluko/zerotier-nat.git
+cd zerotier-nat
+docker compose up -d
+docker exec zerotier zerotier-cli join [YOUR_NETWORK_ID]
+```
+
+To update, use the command below:
+```
+docker compose pull
+docker compose up -d
+```
 
 ## Further Configuration
 
