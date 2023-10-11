@@ -1,0 +1,14 @@
+volumes:
+  zerotier:
+
+services:
+  zerotier-nat:
+    container_name: zerotier
+    image: igluko/zerotier-nat
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    volumes:
+      - zerotier:/var/lib/zerotier-one
+    restart: unless-stopped
