@@ -27,6 +27,9 @@ To run with docker compose, use the command below:
 git clone git@github.com:igluko/zerotier-nat.git
 cd zerotier-nat
 docker compose up -d
+```
+Then add the node to the network:
+```
 docker exec zerotier zerotier-cli join [YOUR_NETWORK_ID]
 ```
 
